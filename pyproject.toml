@@ -1,0 +1,34 @@
+[build-system]
+requires = [
+    "setuptools",
+    "setuptools-scm"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai_advanced_edward_seo"
+description = "AI Advanced Practice (edward.seo)"
+version = "0.0.1"
+authors = [
+    { name = "edward.seo", email = "edward.seo@kakaocorp.com" }
+]
+maintainers = [
+    { name = "edward.seo", email = "edward.seo@kakaocorp.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai",
+    "langchain",
+    "langchain-openai",
+    "langchain-openai",
+    "langchain_chroma",
+    "langchain-text-splitters",
+    "langchain_community",
+    "webdriver_manager",
+    "beautifulsoup4",
+    "selenium",
+    "unstructured"
+]
+[tool.setuptools.package-data]
+ai_advanced_edward_seo = ["configs/*.json"]
