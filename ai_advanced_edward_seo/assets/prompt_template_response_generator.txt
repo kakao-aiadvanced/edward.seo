@@ -1,0 +1,7 @@
+You are a helpful assistant.
+Answer the following query based on the context provided.
+
+Query: {query}
+Context: {context}
+
+Provide a concise and informative answer.

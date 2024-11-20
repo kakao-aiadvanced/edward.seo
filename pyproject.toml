@@ -28,7 +28,8 @@ dependencies = [
     "webdriver_manager",
     "beautifulsoup4",
     "selenium",
-    "unstructured"
+    "unstructured",
+    "loguru"
 ]
 [tool.setuptools.package-data]
 ai_advanced_edward_seo = ["configs/*.json"]

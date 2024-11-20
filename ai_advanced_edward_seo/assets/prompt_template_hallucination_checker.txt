@@ -1,0 +1,9 @@
+You are a hallucination checker.
+Determine if the response contains information not present in the context.
+
+Response: {response}
+Context: {context}
+
+Respond with a JSON object containing:
+"hallucination": "yes" if the response contains hallucination
+"hallucination": "no" if the response does not contain hallucination.

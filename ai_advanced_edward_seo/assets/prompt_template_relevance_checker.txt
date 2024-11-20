@@ -1,0 +1,9 @@
+You are a relevance checker.
+Determine if the following document is relevant to the query.
+
+Document: {document_content}
+Query: {query}
+
+Respond with a JSON object containing:
+"relevance": "yes" if relevant
+"relevance": "no" if not relevant.
