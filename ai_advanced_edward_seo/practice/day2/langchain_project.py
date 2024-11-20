@@ -93,7 +93,7 @@ def main():
     ]
     
     if not check_api_keys(mandatory_keys=mandatory_api_keys, optional_keys=optional_api_keys):
-        logger.error("Please set the OPENAI_API_KEY environment variable.")
+        logger.error("Please set the environment variables for mandatory API keys: {mandatory_api_keys}")
         return
 
     check_chrome_driver()

@@ -39,3 +39,26 @@ class ResponseGenerator:
             print(response)
         return response
 
+    def generate_from_context(self, context, query, stream: bool = False):
+        if isinstance(context, list):
+            all_content = ''
+            for doc in context:
+                all_content += doc.get_page_content() + '\n\n'
+        else:
+            all_content = context
+
+        response_chain = (
+            self.prompt
+            | self.llm
+            | StrOutputParser()
+        )
+
+        if stream:
+            response = []
+            for chunk in response_chain.stream({"context": all_content, "query": query}):
+                response.append(chunk)
+                print(chunk, end="", flush=True)
+        else:
+            response = response_chain.invoke({"context": all_content, "query": query})
+            print(response)
+        return response
